@@ -8,6 +8,8 @@
 - 消息传输：websocket
 - 服务降级：hystrix
 - 网关：springcloud gateway
+- 缓存：redis
+- 消息记录查询：ELK
 
 ## 项目架构
 - api: 提供微服务调用接口

@@ -4,55 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a0b96a-d996-4aeb-9035-aad3110be2bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-api/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-api/src/main/java/com/jayce/chatroom/api/ChatroomApiApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-api/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-api/src/test/java/com/jayce/chatroom/api/ChatroomApiApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-common/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-common/src/main/java/com/jayce/chatroom/common/ChatroomCommonApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-common/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-common/src/test/java/com/jayce/chatroom/common/ChatroomCommonApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-friend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-friend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-friend/src/main/java/com/jayce/chatroom/friend/ChatroomFriendApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-friend/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-friend/src/test/java/com/jayce/chatroom/friend/ChatroomFriendApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-gateway/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-gateway/src/main/java/com/jayce/chatroom/gateway/ChatroomGatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-gateway/src/test/java/com/jayce/chatroom/gateway/ChatroomGatewayApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-group/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-group/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-group/src/main/java/com/jayce/chatroomgroup/ChatroomGroupApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-group/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-group/src/test/java/com/jayce/chatroomgroup/ChatroomGroupApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-message/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-message/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/chatroom/message/ChatroomMessagesApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-message/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-message/src/test/java/com/jayce/chatroom/message/ChatroomMessagesApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-notice/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-notice/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-notice/src/main/java/com/jayce/chatroom/notice/ChatroomNoticeApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-notice/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-notice/src/test/java/com/jayce/chatroom/notice/ChatroomNoticeApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-user/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-user/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/chatroom/user/ChatroomUserApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-user/src/test/java/com/jayce/chatroom/user/ChatroomUserApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="99a0b96a-d996-4aeb-9035-aad3110be2bd" name="Changes" comment="创建后端架构">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +70,13 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "repository",
+      "module",
+      "directory"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Spring Boot.ChatroomMessagesApplication">
@@ -185,11 +145,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723638189431</updated>
-      <workItem from="1723638190558" duration="1389000" />
+      <workItem from="1723638190558" duration="2286000" />
     </task>
+    <task id="LOCAL-00001" summary="创建后端架构">
+      <created>1723639629958</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723639629958</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="创建后端架构" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建后端架构" />
   </component>
 </project>
