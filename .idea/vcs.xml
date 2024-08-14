@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chatroom-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chatroom-common" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chatroom-friend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chatroom-gateway" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chatroom-group" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chatroom-message" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chatroom-notice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chatroom-user" vcs="Git" />
+  </component>
+</project>
