@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99a0b96a-d996-4aeb-9035-aad3110be2bd" name="Changes" comment="测试数据库连接，集成mybatis">
-      <change afterPath="$PROJECT_DIR$/chatroom-user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-gateway" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-gateway" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-group/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-group/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/response/ResponseEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/response/ServerResponseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/vo/BaseVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/vo/UserSimpleVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/vo/UserVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-group" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-group" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/mapper/UserInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/resources/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/resources/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +58,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chatroom-group" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chatroom-user" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,6 +78,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -98,7 +113,14 @@
       <recent name="F:\java projects\chatroom\chatroom-user\src\main\resources\mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ChatroomUserApplicationTests.contextLoads">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UserApplication (1)">
     <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jayce.user.Generator" />
       <module name="chatroom-user" />
@@ -124,6 +146,9 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="UserApplication (1) | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/UserApplication (1).http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="ChatroomUserApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chatroom-user" />
@@ -221,6 +246,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.UserApplication (1) | #1" />
         <item itemvalue="JUnit.ChatroomUserApplicationTests.contextLoads" />
         <item itemvalue="JUnit.ChatroomUserApplicationTests" />
         <item itemvalue="Application.Generator" />
@@ -242,7 +268,7 @@
       <workItem from="1723771248127" duration="1655000" />
       <workItem from="1723980801638" duration="362000" />
       <workItem from="1723981181262" duration="5002000" />
-      <workItem from="1724031781031" duration="4838000" />
+      <workItem from="1724031781031" duration="9397000" />
     </task>
     <task id="LOCAL-00001" summary="创建后端架构">
       <created>1723639629958</created>
@@ -258,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724044924424</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="测试数据库连接，集成mybatis">
+      <created>1724045099308</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724045099308</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
