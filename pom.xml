@@ -28,6 +28,7 @@
        <spring-boot.version>3.1.2</spring-boot.version>
        <spring-cloud.version>2022.0.4</spring-cloud.version>
        <spring-cloud-alibaba.version>2022.0.0.0</spring-cloud-alibaba.version>
+       <dubbo.version>3.0.0</dubbo.version>
 
        <seata.version>1.6.1</seata.version>
        <nacos.version>2.2.4</nacos.version>
@@ -70,7 +71,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!---nacos-->
+            <!--dubbo-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <!--nacos-->
             <dependency>
                 <groupId>com.alibaba.nacos</groupId>
                 <artifactId>nacos-client</artifactId>

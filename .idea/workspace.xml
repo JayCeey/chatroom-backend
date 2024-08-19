@@ -4,20 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a0b96a-d996-4aeb-9035-aad3110be2bd" name="Changes" comment="测试数据库连接，集成mybatis">
-      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/response/ResponseEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/response/ServerResponseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/vo/BaseVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/vo/UserSimpleVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/vo/UserVO.java" afterDir="false" />
+    <list default="true" id="99a0b96a-d996-4aeb-9035-aad3110be2bd" name="Changes" comment="测试user的前后端响应">
+      <change afterPath="$PROJECT_DIR$/chatroom-api/chatroom-api-user/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-api/chatroom-api-user/src/main/java/com/jayce/api/user/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-api/chatroom-api-user/src/main/java/com/jayce/api/user/feign/UserFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-api/chatroom-api-user/src/main/java/com/jayce/api/user/vo/UserApiVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/constant/Auth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/feign/FeignInsideAuthConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-gateway/src/main/java/com/jayce/gateway/GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/MessageApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/controller/MessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/vo/HistoryVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/vo/MessageVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/feign/UserFeignController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-group" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-group" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-api" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-api/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-api/src/test/java/com/jayce/chatroom/api/ChatroomApiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-common" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-common" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-gateway" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-gateway" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-gateway/src/main/java/com/jayce/chatroom/gateway/ChatroomGatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-message" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-message" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-message/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-message/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/chatroom/message/ChatroomMessagesApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-message/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-message/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatroom-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/mapper/UserInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/resources/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/resources/mapper/UserInfoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -58,7 +80,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chatroom-user" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -86,7 +108,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8 (2)",
+    "jdk.selected.JAVA_MODULE": "jbr-17",
     "last_opened_file_path": "F:/java projects/chatroom",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -120,66 +142,15 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserApplication (1)">
-    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jayce.user.Generator" />
-      <module name="chatroom-user" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jayce.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jayce.Main" />
-      <module name="SSM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jayce.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserApplication (1) | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/UserApplication (1).http" requestIdentifier="#1" runType="Run single request">
+  <component name="RunManager" selected="HTTP Request.http-requests-log | #1">
+    <configuration name="MessageApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/MessageApplication.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="ChatroomUserApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chatroom-user" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jayce.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jayce.user" />
-      <option name="MAIN_CLASS_NAME" value="com.jayce.user.ChatroomUserApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="MessageApplication | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/MessageApplication.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="ChatroomUserApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chatroom-user" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jayce.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jayce.user" />
-      <option name="MAIN_CLASS_NAME" value="com.jayce.user.ChatroomUserApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="http-requests-log | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="ChatroomApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="chatroom-api" />
@@ -230,6 +201,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="chatroom-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jayce.gateway.GatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jayce.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="chatroom-message" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jayce.message.MessageApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jayce.message.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="chatroom-user" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jayce.user.UserApplication" />
@@ -246,11 +243,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.UserApplication (1) | #1" />
-        <item itemvalue="JUnit.ChatroomUserApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.ChatroomUserApplicationTests" />
-        <item itemvalue="Application.Generator" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Spring Boot.MessageApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="HTTP Request.http-requests-log | #1" />
+        <item itemvalue="HTTP Request.MessageApplication | #1" />
+        <item itemvalue="HTTP Request.MessageApplication | #2" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +265,7 @@
       <workItem from="1723771248127" duration="1655000" />
       <workItem from="1723980801638" duration="362000" />
       <workItem from="1723981181262" duration="5002000" />
-      <workItem from="1724031781031" duration="9397000" />
+      <workItem from="1724031781031" duration="17649000" />
     </task>
     <task id="LOCAL-00001" summary="创建后端架构">
       <created>1723639629958</created>
@@ -291,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724045099308</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="测试user的前后端响应">
+      <created>1724060416195</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724060416195</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +315,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="创建后端架构" />
     <MESSAGE value="测试数据库连接，集成mybatis" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试数据库连接，集成mybatis" />
+    <MESSAGE value="测试user的前后端响应" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试user的前后端响应" />
   </component>
 </project>
