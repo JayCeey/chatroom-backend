@@ -13,10 +13,11 @@
 
 ## 项目架构
 - api: 提供微服务调用接口
-- common: 公共工具，如消息队列、utils工具类、minio存储等
+- common: 公共工具，如消息队列、utils工具类、minio存储、缓存等
 - friend: 朋友服务
 - gateway: 网关
 - group: 群组服务
 - message: 消息服务
 - notice: 通知服务
 - user: 用户服务
+
