@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a0b96a-d996-4aeb-9035-aad3110be2bd" name="Changes" comment="集成rocketmq" />
+    <list default="true" id="99a0b96a-d996-4aeb-9035-aad3110be2bd" name="Changes" comment="集成rocketmq">
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-cache/src/main/java/com/jayce/common/cache/adapter/CacheTtlAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-cache/src/main/java/com/jayce/common/cache/bo/CacheNameWithTtlBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-cache/src/main/java/com/jayce/common/cache/config/RedisCacheConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-cache/src/main/java/com/jayce/common/cache/config/RedisLockConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-cache/src/main/java/com/jayce/common/cache/constant/CacheNames.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-cache/src/main/java/com/jayce/common/cache/constant/UserCacheNames.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-cache/src/main/java/com/jayce/common/cache/util/CacheManagerUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-cache/src/main/java/com/jayce/common/cache/util/RedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/config/AopConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/exception/ChatroomException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/util/SpringContextUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-common/chatroom-common-cache/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-cache/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-common/chatroom-common-cache/src/main/java/com/jayce/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/handler/WebSocketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/handler/WebSocketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/UserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/controller/UserController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +61,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chatroom-message" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chatroom-user" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -60,38 +79,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "jbr-17",
-    "last_opened_file_path": "F:/java projects/chatroom",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.31300348",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "24912bbe95aca4c1fe4fe1e2f9cd962d",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;jbr-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/java projects/chatroom&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.31300348&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;24912bbe95aca4c1fe4fe1e2f9cd962d&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "repository",
-      "module",
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;repository&quot;,
+      &quot;module&quot;,
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -110,8 +129,11 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.http-requests-log | #1">
+  <component name="RunManager" selected="HTTP Request.http-requests-log | #2">
     <configuration name="http-requests-log | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="http-requests-log | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" index="2" requestIdentifier="#2" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -161,18 +183,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="HTTP Request.http-requests-log | #2" />
       <item itemvalue="HTTP Request.http-requests-log | #1" />
-      <item itemvalue="Spring Boot.ChatroomGroupApplication" />
+      <item itemvalue="Spring Boot.GroupApplication" />
       <item itemvalue="Spring Boot.MessageApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
       <item itemvalue="Spring Boot.UserApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MessageApplication" />
-        <item itemvalue="HTTP Request.http-requests-log | #1" />
-        <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="HTTP Request.http-requests-log | #2" />
         <item itemvalue="Spring Boot.UserApplication" />
+        <item itemvalue="HTTP Request.http-requests-log | #1" />
+        <item itemvalue="Spring Boot.MessageApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -193,6 +217,7 @@
       <workItem from="1724031781031" duration="17718000" />
       <workItem from="1724108569362" duration="12881000" />
       <workItem from="1724225184120" duration="9641000" />
+      <workItem from="1724242390540" duration="2870000" />
     </task>
     <task id="LOCAL-00001" summary="创建后端架构">
       <created>1723639629958</created>
@@ -257,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724241106813</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="集成rocketmq">
+      <created>1724242399898</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724242399898</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
