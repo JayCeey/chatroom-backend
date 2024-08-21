@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-database/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-database/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-rocketmq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-rocketmq/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-friend/src/main/java" charset="UTF-8" />
