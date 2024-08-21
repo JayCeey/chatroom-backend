@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a0b96a-d996-4aeb-9035-aad3110be2bd" name="Changes" comment="添加websocket">
-      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java/com/jayce/common/util/Json.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-rocketmq/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-rocketmq/src/main/java/com/jayce/common/rocketmq/config/RocketMqAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-common/chatroom-common-rocketmq/src/main/java/com/jayce/common/rocketmq/constant/RocketMqConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/bo/MessageBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/config/RocketMqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/listener/MessageNotifyConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-common" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-common" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-group/src/main/java/com/jayce/chatroomgroup/ChatroomGroupApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-group/src/main/java/com/jayce/group/GroupApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-group/src/test/java/com/jayce/chatroomgroup/ChatroomGroupApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-group/src/test/java/com/jayce/group/ChatroomGroupApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-message/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-message/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/MessageApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/MessageApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/config/WebSocketConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/handler/WebSocketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/handler/WebSocketHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="99a0b96a-d996-4aeb-9035-aad3110be2bd" name="Changes" comment="集成rocketmq" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +42,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chatroom-message" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -214,7 +192,7 @@
       <workItem from="1723981181262" duration="5002000" />
       <workItem from="1724031781031" duration="17718000" />
       <workItem from="1724108569362" duration="12881000" />
-      <workItem from="1724225184120" duration="9482000" />
+      <workItem from="1724225184120" duration="9641000" />
     </task>
     <task id="LOCAL-00001" summary="创建后端架构">
       <created>1723639629958</created>
@@ -272,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724112139610</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="集成rocketmq">
+      <created>1724241106813</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724241106813</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +312,8 @@
     <MESSAGE value="添加网关，实现feign RPC调用" />
     <MESSAGE value="添加nacos配置中心" />
     <MESSAGE value="添加websocket" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加websocket" />
+    <MESSAGE value="集成rocketmq" />
+    <option name="LAST_COMMIT_MESSAGE" value="集成rocketmq" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
