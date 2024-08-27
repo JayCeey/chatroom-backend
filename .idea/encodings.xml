@@ -5,6 +5,10 @@
     <file url="file://$PROJECT_DIR$/chatroom-api/chatroom-api-user/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-biz/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-cache/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-cache/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-core/src/main/java" charset="UTF-8" />
@@ -13,6 +17,8 @@
     <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-database/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-rocketmq/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-rocketmq/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-common/chatroom-common-security/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-friend/src/main/java" charset="UTF-8" />
@@ -21,6 +27,8 @@
     <file url="file://$PROJECT_DIR$/chatroom-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-group/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-group/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-leaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-leaf/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-message/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-message/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-notice/src/main/java" charset="UTF-8" />
