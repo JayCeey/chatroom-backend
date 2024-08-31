@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jayce.auth.mapper.AuthAccountMapper">
+  <resultMap id="BaseResultMap" type="com.jayce.auth.model.AuthAccount">
+    <result column="user_id" property="userId"/>
+    <result column="username" property="username" />
+    <result column="password" property="password" />
+    <result column="role" property="sysType" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    `user_id`, `username`, `password`, `role`
+  </sql>
+
+  <select id="getAuthAccountInVerifyByInputUserName" resultType="com.jayce.common.security.bo.AuthAccountInVerifyBO">
+    select ui.user_id userId, ui.username username, uc.password password, ur.role sysType from user_info ui
+    left join
+    user_credential uc
+    on ui.user_id = uc.user_id
+    left join
+    user_role ur
+    on ui.user_id = ur.user_id
+    where 1=1
+    <if test="inputUserNameType == 1">
+      and username = #{inputUserName}
+    </if>
+  </select>
+
+  <select id="getByUserIdAndType" resultMap="BaseResultMap">
+    select uid, username, `password`, create_ip,
+     `status`, sys_type, user_id, tenant_id, is_admin from auth_account where sys_type = #{sysType} and user_id = #{userId}
+  </select>
+  <select id="getByUid" resultMap="BaseResultMap">
+    select username, `password`, create_ip,
+           `status`, sys_type, user_id, tenant_id, is_admin from auth_account where uid = #{uid}
+  </select>
+
+  <update id="updatePassword">
+    update auth_account set password = #{newPassWord} where sys_type = #{sysType} and user_id = #{userId}
+  </update>
+  <insert id="save">
+    insert into auth_account (`uid`,`username`,`password`,`create_ip`,`status`,`sys_type`,`user_id`,`tenant_id`,`is_admin`)
+    values (#{authAccount.uid},#{authAccount.username},#{authAccount.password},#{authAccount.createIp},#{authAccount.status},#{authAccount.sysType},#{authAccount.userId},#{authAccount.tenantId},#{authAccount.isAdmin});
+  </insert>
+  <update id="updateAccountInfo">
+    update auth_account
+    <set>
+      <if test="authAccount.username != null">
+        username = #{authAccount.username},
+      </if>
+      <if test="authAccount.password != null">
+        password = #{authAccount.password},
+      </if>
+      <if test="authAccount.status != null">
+        status = #{authAccount.status},
+      </if>
+    </set>
+    where user_id = #{authAccount.userId} and sys_type = #{authAccount.sysType}
+  </update>
+  <update id="deleteByUserIdAndSysType">
+    update auth_account set status = -1 where user_id = #{userId} and sys_type = #{sysType}
+  </update>
+  <update id="updateUserInfoByUserId">
+    update auth_account
+    <set>
+      <if test="authAccount.tenantId != null">
+        tenant_id = #{authAccount.tenantId},
+      </if>
+    </set>
+    where user_id = #{userId} and sys_type = #{sysType} and status != -1 limit 1
+  </update>
+
+  <select id="getAccountByInputUserName" resultType="com.jayce.auth.model.AuthAccount">
+    select uid,sys_type,user_id from auth_account where username = #{validAccount} and sys_type = #{systemType}
+  </select>
+  <select id="getByUsernameAndSysType" resultType="com.jayce.api.auth.vo.AuthAccountVO">
+    select uid, username from auth_account where status != 1
+    <if test="sysType != null">
+      and sys_type = #{sysType}
+    </if>
+    <if test="userName != null and userName != ''">
+      and username = #{userName}
+    </if>
+  </select>
+  <select id="getMerchantInfoByTenantId" resultType="com.jayce.api.auth.vo.AuthAccountVO">
+    select user_id, sys_type, uid, username, password, is_admin, tenant_id, status from auth_account
+    where sys_type = 1 and is_admin = 1 and tenant_id = #{tenantId} limit 1
+  </select>
+</mapper>
