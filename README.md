@@ -5,10 +5,8 @@
 - oss存储：minio
 - 配置管理、服务中心：nacos
 - 消息传输：websocket
-- 服务降级：hystrix
 - 网关：springcloud gateway
 - 缓存：redis
-- 用户索引查询：ELK
 - 数据库同步工具：canal
 
 ## 项目架构
