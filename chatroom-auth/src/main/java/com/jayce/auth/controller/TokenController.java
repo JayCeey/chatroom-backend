@@ -31,20 +31,18 @@ public class TokenController {
         ServerResponseEntity<TokenInfoBO> tokenInfoServerResponseEntity = tokenStore
                 .refreshToken(refreshToken);
         if (!tokenInfoServerResponseEntity.isSuccess()) {
+
             return ServerResponseEntity.transform(tokenInfoServerResponseEntity);
         }
 
         TokenInfoBO tokenInfoBO = tokenInfoServerResponseEntity.getData();
 
         Cookie cookie = new Cookie("refreshToken", tokenInfoBO.getRefreshToken());
-
         cookie.setHttpOnly(true);
-
         cookie.setSecure(true);
-
         cookie.setAttribute("SameSite", "strict");
-
         response.addCookie(cookie);
+
         return ServerResponseEntity
                 .success(BeanUtil.map(tokenInfoBO, TokenInfoVO.class));
     }

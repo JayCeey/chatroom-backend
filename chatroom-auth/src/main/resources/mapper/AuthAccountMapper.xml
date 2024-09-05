@@ -30,6 +30,7 @@
     select uid, username, `password`, create_ip,
      `status`, sys_type, user_id, tenant_id, is_admin from auth_account where sys_type = #{sysType} and user_id = #{userId}
   </select>
+
   <select id="getByUid" resultMap="BaseResultMap">
     select username, `password`, create_ip,
            `status`, sys_type, user_id, tenant_id, is_admin from auth_account where uid = #{uid}

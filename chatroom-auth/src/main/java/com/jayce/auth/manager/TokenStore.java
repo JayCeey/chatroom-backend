@@ -111,13 +111,13 @@ public class TokenStore {
             }
 
             // 通过uid + sysType 保存access_token，当需要禁用用户的时候，可以根据uid + sysType 禁用用户
-            connection.expire(uidKey, expiresIn);
+            connection.expire(uidKey, 60);
 
             // 通过refresh_token获取用户的access_token从而刷新token，默认过期时间是10分钟
-            connection.setEx(refreshKey, 600, accessToken.getBytes(StandardCharsets.UTF_8));
+            connection.setEx(refreshKey, 3600, accessToken.getBytes(StandardCharsets.UTF_8));
 
             // 通过access_token保存用户的租户id，用户id，uid
-            connection.setEx(accessKey, expiresIn, Objects.requireNonNull(redisSerializer.serialize(userInfoInToken)));
+            connection.setEx(accessKey, 15, Objects.requireNonNull(redisSerializer.serialize(userInfoInToken)));
 
             return null;
         });
@@ -209,7 +209,7 @@ public class TokenStore {
                 .get(getAccessKey(accessToken));
 
         if (userInfoInTokenBO == null) {
-            return ServerResponseEntity.showFailMsg("accessToken 已过期");
+            return ServerResponseEntity.fail(ResponseEnum.UNAUTHORIZED); // accessToken过期
         }
         return ServerResponseEntity.success(userInfoInTokenBO);
     }
@@ -232,13 +232,13 @@ public class TokenStore {
         String accessToken = stringRedisTemplate.opsForValue().get(getRefreshToAccessKey(realRefreshToken));
 
         if (StrUtil.isBlank(accessToken)) {
-            return ServerResponseEntity.showFailMsg("refreshToken 已过期");
+            return ServerResponseEntity.showFailMsg("refreshToken过期"); // refreshToken过期
         }
 
         ServerResponseEntity<UserInfoInTokenBO> userInfoByAccessTokenEntity = decryptJwtToken(accessToken);
 
         if(!userInfoByAccessTokenEntity.isSuccess()){
-            return ServerResponseEntity.showFailMsg(userInfoByAccessTokenEntity.getMsg());
+            return ServerResponseEntity.showFailMsg(userInfoByAccessTokenEntity.getMsg()); // accessToken过期
         }
 
 //        ServerResponseEntity<UserInfoInTokenBO> userInfoByAccessTokenEntity = getUserInfoByAccessToken(accessToken,
@@ -304,16 +304,16 @@ public class TokenStore {
         try {
             decryptStr = Base64.decodeStr(data);
             decryptToken = decryptStr.substring(0,32);
-            // 创建token的时间，token使用时效性，防止攻击者通过一堆的尝试找到aes的密码，虽然aes是目前几乎最好的加密算法
-            long createTokenTime = Long.parseLong(decryptStr.substring(32,45));
-            // 系统类型
-            int sysType = Integer.parseInt(decryptStr.substring(45));
-            // token的过期时间
-            int expiresIn = getExpiresIn(sysType);
-            long second = 1000L;
-            if (System.currentTimeMillis() - createTokenTime > expiresIn * second) {
-                return ServerResponseEntity.showFailMsg("refresh token已过期");
-            }
+//            // 创建token的时间，token使用时效性，防止攻击者通过一堆的尝试找到aes的密码，虽然aes是目前几乎最好的加密算法
+//            long createTokenTime = Long.parseLong(decryptStr.substring(32,45));
+//            // 系统类型
+//            int sysType = Integer.parseInt(decryptStr.substring(45));
+//            // token的过期时间
+//            int expiresIn = getExpiresIn(sysType);
+//            long second = 1000L;
+//            if (System.currentTimeMillis() - createTokenTime > expiresIn * second) {
+//                return ServerResponseEntity.showFailMsg("refresh token已过期");
+//            }
         }
         catch (Exception e) {
             logger.error(e.getMessage());

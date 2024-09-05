@@ -13,6 +13,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Tag(name = "登录")
+@Slf4j
 public class LoginController {
 
     @Autowired
@@ -37,11 +39,12 @@ public class LoginController {
     @PostMapping("/ua/login")
     @Operation(summary = "账号密码" , description = "通过账号登录，还要携带用户的类型，也就是用户所在的系统")
     public ServerResponseEntity<TokenInfoVO> login(@Valid @RequestBody AuthenticationDTO authenticationDTO,
-                                               HttpServletRequest request,
                                                HttpServletResponse response) {
+
         ServerResponseEntity<UserInfoInTokenBO> userInfoInTokenResponse = authAccountService
                 .getUserInfoInTokenByInputUserNameAndPassword(authenticationDTO.getPrincipal(),
                         authenticationDTO.getCredentials(), authenticationDTO.getSysType());
+
         if (!userInfoInTokenResponse.isSuccess()) {
             return ServerResponseEntity.transform(userInfoInTokenResponse);
         }
@@ -49,15 +52,11 @@ public class LoginController {
         UserInfoInTokenBO data = userInfoInTokenResponse.getData();
 
         TokenInfoVO tokenInfoVO = tokenStore.storeAndGetVo(data);
-
+        log.info("登录成功，设置cookie: {}", tokenInfoVO);
         Cookie cookie = new Cookie("refreshToken", tokenInfoVO.getRefreshToken());
-
         cookie.setHttpOnly(true);
-
-        cookie.setAttribute("SameSite", "strict");
-
         cookie.setSecure(true);
-
+        cookie.setAttribute("SameSite", "strict");
         response.addCookie(cookie);
 
         // 保存token，返回token数据给前端，这里是最重要的
@@ -66,12 +65,10 @@ public class LoginController {
 
     @PostMapping("/logout")
     @Operation(summary = "退出登陆" , description = "点击退出登陆，清除token，清除菜单缓存")
-    public ServerResponseEntity<TokenInfoVO> loginOut() {
+    public ServerResponseEntity<TokenInfoVO> logout() {
         UserInfoInTokenBO userInfoInToken = AuthUserContext.get();
         // 删除该用户在该系统的token
         tokenStore.deleteAllToken(userInfoInToken.getSysType().toString(), userInfoInToken.getUserId());
         return ServerResponseEntity.success();
     }
-
-
 }
