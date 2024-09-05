@@ -2,10 +2,7 @@ package com.jayce.biz.config;
 
 import com.jayce.common.exception.ChatroomException;
 import com.jayce.common.response.ResponseEnum;
-import io.minio.GetPresignedObjectUrlArgs;
-import io.minio.MinioClient;
-import io.minio.PutObjectArgs;
-import io.minio.RemoveObjectArgs;
+import io.minio.*;
 import io.minio.http.Method;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -59,6 +56,16 @@ public class MinioTemplate implements InitializingBean {
             e.printStackTrace();
             throw new ChatroomException(ResponseEnum.EXCEPTION);
         }
+    }
+
+    public byte[] getObjectResponse(String filePath) throws Exception{
+        GetObjectResponse getObjectResponse =  minioClient.getObject(
+                GetObjectArgs.builder()
+                        .bucket(ossConfig.getBucket())
+                        .object(filePath)
+                        .build()
+        );
+        return getObjectResponse.readAllBytes();
     }
 
     public void uploadMinio(byte[] bytes, String filePath, String contentType) throws IOException {

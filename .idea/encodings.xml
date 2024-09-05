@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/chatroom-api/chatroom-api-auth/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-api/chatroom-api-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-api/chatroom-api-biz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatroom-api/chatroom-api-biz/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-api/chatroom-api-friend/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-api/chatroom-api-friend/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chatroom-api/chatroom-api-user/src/main/java" charset="UTF-8" />
