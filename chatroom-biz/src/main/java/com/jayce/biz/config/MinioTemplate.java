@@ -2,6 +2,7 @@ package com.jayce.biz.config;
 
 import com.jayce.common.exception.ChatroomException;
 import com.jayce.common.response.ResponseEnum;
+import com.jayce.common.response.ServerResponseEntity;
 import io.minio.*;
 import io.minio.http.Method;
 import org.slf4j.Logger;
@@ -58,14 +59,19 @@ public class MinioTemplate implements InitializingBean {
         }
     }
 
-    public byte[] getObjectResponse(String filePath) throws Exception{
-        GetObjectResponse getObjectResponse =  minioClient.getObject(
-                GetObjectArgs.builder()
-                        .bucket(ossConfig.getBucket())
-                        .object(filePath)
-                        .build()
-        );
-        return getObjectResponse.readAllBytes();
+    public ServerResponseEntity<byte[]> getObjectResponse(String filePath) throws Exception{
+        try {
+            GetObjectResponse getObjectResponse =  minioClient.getObject(
+                    GetObjectArgs.builder()
+                            .bucket(ossConfig.getBucket())
+                            .object(filePath)
+                            .build()
+            );
+            return ServerResponseEntity.success(getObjectResponse.readAllBytes());
+        }catch (Exception e){
+            logger.error("minio获取文件错误：", e);
+            return ServerResponseEntity.showFailMsg("minio获取文件错误：" + e.getMessage());
+        }
     }
 
     public void uploadMinio(byte[] bytes, String filePath, String contentType) throws IOException {

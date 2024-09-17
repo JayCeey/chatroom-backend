@@ -21,7 +21,6 @@
 - message: 消息服务（重点）
   - 提供websocket服务
   - 使用rocketmq实现异步发送通知以及通知其他用户功能
-- notice: 通知服务
-  - 服务端流式推送通知（服务端单向推送），不关闭HTTP连接而是持续发送HTTP连接，比websocket轻量
+- notice
 - user: 用户服务
 

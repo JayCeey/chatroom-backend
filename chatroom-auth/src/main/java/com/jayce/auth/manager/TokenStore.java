@@ -117,7 +117,7 @@ public class TokenStore {
             connection.setEx(refreshKey, 3600, accessToken.getBytes(StandardCharsets.UTF_8));
 
             // 通过access_token保存用户的租户id，用户id，uid
-            connection.setEx(accessKey, 15, Objects.requireNonNull(redisSerializer.serialize(userInfoInToken)));
+            connection.setEx(accessKey, 60, Objects.requireNonNull(redisSerializer.serialize(userInfoInToken)));
 
             return null;
         });

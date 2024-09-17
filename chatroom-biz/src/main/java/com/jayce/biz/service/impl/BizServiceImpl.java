@@ -7,6 +7,7 @@ import com.jayce.biz.bo.FileBO;
 import com.jayce.biz.config.MinioTemplate;
 import com.jayce.biz.config.OssConfig;
 import com.jayce.biz.service.BizService;
+import com.jayce.common.response.ResponseEnum;
 import com.jayce.common.response.ServerResponseEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +21,6 @@ import java.io.IOException;
 public class BizServiceImpl implements BizService {
 
     public static final String NORM_DAY_PATTERN = "yyyy/MM/dd";
-
-    @Autowired
-    private OssConfig ossConfig;
 
     @Autowired
     private MinioTemplate minioTemplate;
@@ -55,11 +53,31 @@ public class BizServiceImpl implements BizService {
 
     @Override
     public ServerResponseEntity<BizUserAvatarVO> getUserAvatar(String path) {
-        return null;
+        try {
+            ServerResponseEntity<byte[]> serverResponseEntity = minioTemplate.getObjectResponse(path);
+            if(!serverResponseEntity.isSuccess()) return ServerResponseEntity.showFailMsg(serverResponseEntity.getMsg());
+            byte[] data = serverResponseEntity.getData();
+            BizUserAvatarVO bizUserAvatarVO = new BizUserAvatarVO();
+            bizUserAvatarVO.setData(data);
+            return ServerResponseEntity.success(bizUserAvatarVO);
+        } catch (Exception e) {
+            log.error("获取文件失败: ", e);
+            return ServerResponseEntity.fail(ResponseEnum.EXCEPTION);
+        }
     }
 
     @Override
     public ServerResponseEntity<BizMessagePicVO> getMessagePic(String path) {
-        return null;
+        try {
+            ServerResponseEntity<byte[]> serverResponseEntity = minioTemplate.getObjectResponse(path);
+            if(!serverResponseEntity.isSuccess()) return ServerResponseEntity.showFailMsg(serverResponseEntity.getMsg());
+            byte[] data = serverResponseEntity.getData();
+            BizMessagePicVO bizMessagePicVO = new BizMessagePicVO();
+            bizMessagePicVO.setData(data);
+            return ServerResponseEntity.success(bizMessagePicVO);
+        } catch (Exception e) {
+            log.error("获取文件失败: ", e);
+            return ServerResponseEntity.fail(ResponseEnum.EXCEPTION);
+        }
     }
 }

@@ -32,8 +32,18 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>com.jayce</groupId>
-            <artifactId>chatroom-common-core</artifactId>
+            <artifactId>chatroom-common-database</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jayce</groupId>
+            <artifactId>chatroom-common-security</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

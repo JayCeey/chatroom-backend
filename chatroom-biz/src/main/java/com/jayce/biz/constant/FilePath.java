@@ -21,7 +21,6 @@ public class FilePath {
     }
 
     public static String getAvatarPath(Integer userId, String contentType){
-        contentType = "png";
-        return AVATAR_PATH + userId.toString() + "/" + IdUtil.simpleUUID() + "." + contentType;
+        return AVATAR_PATH + userId + "/" + IdUtil.simpleUUID() + ".png";
     }
 }

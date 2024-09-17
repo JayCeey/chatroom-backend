@@ -49,11 +49,11 @@ public class BizFeignController implements BizFeignClient {
 
     @Override
     public ServerResponseEntity<BizUserAvatarVO> getUserAvatar(BizUserAvatarDTO bizUserAvatarDTO) {
-        return null;
+        return bizService.getUserAvatar(bizUserAvatarDTO.getPath());
     }
 
     @Override
     public ServerResponseEntity<BizMessagePicVO> getMessagePic(BizMessagePicDTO bizMessagePicDTO) {
-        return null;
+        return bizService.getMessagePic(bizMessagePicDTO.getPath());
     }
 }
