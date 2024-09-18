@@ -4,28 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a0b96a-d996-4aeb-9035-aad3110be2bd" name="Changes" comment="添加上传图片到minio">
-      <change afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/dto/ImageMessageDTO.java" afterDir="false" />
+    <list default="true" id="99a0b96a-d996-4aeb-9035-aad3110be2bd" name="Changes" comment="更新elastic search">
+      <change afterPath="$PROJECT_DIR$/chatroom-group/src/main/java/com/jayce/group/bo/GroupBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-group/src/main/java/com/jayce/group/controller/GroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-group/src/main/java/com/jayce/group/dto/GroupDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-group/src/main/java/com/jayce/group/mapper/GroupMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-group/src/main/java/com/jayce/group/service/impl/GroupServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatroom-group/src/main/java/com/jayce/group/vo/GroupVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-api" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-api/chatroom-api-biz/src/main/java/com/jayce/api/biz/dto/BizMessagePicDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-api/chatroom-api-biz/src/main/java/com/jayce/api/biz/dto/BizMessagePicDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-api/chatroom-api-biz/src/main/java/com/jayce/api/biz/dto/BizUserAvatarDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-api/chatroom-api-biz/src/main/java/com/jayce/api/biz/dto/BizUserAvatarDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-api/chatroom-api-biz/src/main/java/com/jayce/api/biz/feign/BizFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-api/chatroom-api-biz/src/main/java/com/jayce/api/biz/feign/BizFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-auth/src/main/java/com/jayce/auth/manager/TokenStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-auth/src/main/java/com/jayce/auth/manager/TokenStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-biz/src/main/java/com/jayce/biz/config/MinioTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-biz/src/main/java/com/jayce/biz/config/MinioTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-biz/src/main/java/com/jayce/biz/constant/FilePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-biz/src/main/java/com/jayce/biz/constant/FilePath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-biz/src/main/java/com/jayce/biz/feign/BizFeignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-biz/src/main/java/com/jayce/biz/feign/BizFeignController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-biz/src/main/java/com/jayce/biz/service/impl/BizServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-biz/src/main/java/com/jayce/biz/service/impl/BizServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-friend" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-friend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-friend/src/test/java/com/jayce/friend/ChatroomFriendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-friend/src/test/java/com/jayce/friend/ChatroomFriendApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-leaf/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-leaf/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-leaf/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-leaf/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-message/src/main/java/com/jayce/message/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-user" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/java/com/jayce/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatroom-user/src/main/resources/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-user/src/main/resources/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-group" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-group" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-message" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-message" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +52,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chatroom-user" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -307,7 +295,7 @@
       <workItem from="1726446313486" duration="646000" />
       <workItem from="1726459462018" duration="9415000" />
       <workItem from="1726489508350" duration="5430000" />
-      <workItem from="1726535214766" duration="5926000" />
+      <workItem from="1726535214766" duration="7330000" />
     </task>
     <task id="LOCAL-00001" summary="创建后端架构">
       <created>1723639629958</created>
@@ -421,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725544174527</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="更新elastic search">
+      <created>1726571262157</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726571262157</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +489,8 @@
     <MESSAGE value="添加登录鉴权" />
     <MESSAGE value="添加消息模块，websocket+rocketmq推送消息到前端" />
     <MESSAGE value="添加上传图片到minio" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加上传图片到minio" />
+    <MESSAGE value="更新elastic search" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新elastic search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
